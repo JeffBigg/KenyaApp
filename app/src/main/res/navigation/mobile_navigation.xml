@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_inicio">
+
+    <fragment
+        android:id="@+id/navigation_consulta"
+        android:name="com.example.kenya.ui.Consulta.ConsultaFragment"
+        android:label="@string/title_consulta"
+        tools:layout="@layout/fragment_consulta" />
+    <fragment
+        android:id="@+id/navigation_inicio"
+        android:name="com.example.kenya.ui.Inicio.InicioFragment"
+        android:label="@string/title_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/navigation_catalogo"
+        android:name="com.example.kenya.ui.Catalogo.CatalogoFragment"
+        android:label="@string/title_catalogo"
+        tools:layout="@layout/fragment_catalogo" />
+
+    <fragment
+        android:id="@+id/navigation_seleccionado"
+        android:name="com.example.kenya.ui.Seleccionado.SeleccionadoFragment"
+        android:label="@string/title_seleccionado"
+        tools:layout="@layout/fragment_seleccionado" />
+</navigation>

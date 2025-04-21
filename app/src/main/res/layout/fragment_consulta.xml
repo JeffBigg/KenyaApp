@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro autorizado de servicio"
+            android:textStyle="bold"
+            android:background="#FFB74D"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antes de llevar tu equipo al centro de servicio, comunícate con nuestra Línea de Atención al cliente."
+            android:textAlignment="center"
+            android:textColor="#333"
+            android:layout_marginBottom="16dp"
+            tools:ignore="SmallSp" />
+
+        <!-- Card de teléfono -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡Llámanos, nosotros te atenderemos!"
+                android:textColor="#333"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/whatsapp1"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvNumero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="956 021 778"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnWhatsApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consulta vía WhatsApp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#25D366" />
+
+        </LinearLayout>
+
+        <!-- Correos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo de soporte"
+            android:textStyle="bold"
+            android:background="#FF7043"
+            android:textColor="#fff"
+            android:padding="6dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvCorreoSoporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="soporte@kenya.com.pe"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo Corporativo"
+            android:textStyle="bold"
+            android:background="#FF7043"
+            android:textColor="#fff"
+            android:padding="6dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvCorreoCorporativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="acuerdos.marco@kenya.com.pe"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#000" />
+
+        <!-- Políticas -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© Copyright Kenya 2025 - Todos los derechos reservados"
+            android:textSize="12sp"
+            android:textColor="#777"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>
