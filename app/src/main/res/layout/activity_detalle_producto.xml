@@ -42,7 +42,7 @@
             <!-- Botón de compartir -->
 
             <ImageButton
-                android:id="@+id/buttonFavorito"
+                android:id="@+id/btnFavorito"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentTop="true"

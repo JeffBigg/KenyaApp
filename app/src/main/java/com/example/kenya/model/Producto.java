@@ -2,6 +2,8 @@ package com.example.kenya.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Locale;
+
 public class Producto {
     private boolean esSeleccionado;
 
@@ -28,7 +30,17 @@ public class Producto {
     public String getDescripcion() { return descripcion; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 
-    public String getPrecioSoles() { return precioSoles; }
+    public String getPrecioSoles() {
+        if (precioSoles == null || precioSoles.isEmpty()) {
+            return "0.00"; // Valor por defecto si está vacío
+        }
+        try {
+            double precio = Double.parseDouble(precioSoles);
+            return String.format(Locale.US, "%.2f", precio); // Formato a 2 decimales
+        } catch (NumberFormatException e) {
+            return "0.00"; // Si hay error en el formato
+        }
+    }
     public void setPrecioSoles(String precioSoles) { this.precioSoles = precioSoles; }
 
     public String getImagenUrl() { return imagenUrl; }
