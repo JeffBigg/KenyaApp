@@ -67,8 +67,8 @@
         <!-- Botón de corazón -->
         <ImageButton
             android:id="@+id/buttonFavorito"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:scaleType="fitCenter"
             android:layout_alignParentStart="true"
             android:layout_margin="8dp"
