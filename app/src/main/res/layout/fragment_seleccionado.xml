@@ -18,7 +18,24 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSeleccionado"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="572dp"
         android:clipToPadding="false"
-        android:padding="4dp"/>
+        android:padding="4dp" />
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: S/ 0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnEnviarWhatsApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Enviar a WhatsApp"
+        android:textColor="@android:color/white" />
 </LinearLayout>

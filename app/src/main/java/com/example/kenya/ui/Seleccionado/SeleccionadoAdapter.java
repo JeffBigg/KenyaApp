@@ -64,7 +64,7 @@ public class SeleccionadoAdapter extends RecyclerView.Adapter<SeleccionadoAdapte
             stockTextView = itemView.findViewById(R.id.stockProducto);
             descripcionTextView = itemView.findViewById(R.id.descripcionProducto);
             imagenProducto = itemView.findViewById(R.id.imagenProducto);
-            buttonFavorito = itemView.findViewById(R.id.buttonFavoritoSeleccionado); // botón corazón en seleccionados
+            buttonFavorito = itemView.findViewById(R.id.buttonFavoritoSeleccionado);
 
             buttonFavorito.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
@@ -76,7 +76,10 @@ public class SeleccionadoAdapter extends RecyclerView.Adapter<SeleccionadoAdapte
 
         public void bind(Producto producto) {
             nombreTextView.setText(producto.getNombre());
-            precioTextView.setText("S/ " + producto.getPrecioSoles());
+
+            // Formato de precio con 2 decimales
+            precioTextView.setText(String.format("S/ %.2f", producto.getPrecioSoles()));
+
             stockTextView.setText("Stock: " + producto.getStock());
             descripcionTextView.setText(producto.getDescripcion());
 
@@ -84,7 +87,7 @@ public class SeleccionadoAdapter extends RecyclerView.Adapter<SeleccionadoAdapte
                     .load(producto.getImagenUrl())
                     .into(imagenProducto);
 
-            buttonFavorito.setImageResource(R.drawable.corazon_lleno); // Corazón lleno
+            buttonFavorito.setImageResource(R.drawable.corazon_lleno);
         }
     }
 }

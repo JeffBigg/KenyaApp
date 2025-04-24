@@ -96,7 +96,10 @@ public class CatalogoAdapter extends RecyclerView.Adapter<CatalogoAdapter.Produc
 
         public void bind(final Producto producto) {
             nombreTextView.setText(producto.getNombre());
-            precioTextView.setText("S/ " + producto.getPrecioSoles());
+
+            // Formatear el precio como double con 2 decimales
+            precioTextView.setText(String.format("S/ %.2f", producto.getPrecioSoles()));
+
             Glide.with(itemView.getContext())
                     .load(producto.getImagenUrl())
                     .into(productoImageView);
@@ -107,5 +110,6 @@ public class CatalogoAdapter extends RecyclerView.Adapter<CatalogoAdapter.Produc
                 buttonFavorito.setImageResource(R.drawable.corazon21);
             }
         }
+
     }
 }
